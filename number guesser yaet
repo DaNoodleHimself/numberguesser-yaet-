@@ -1,0 +1,26 @@
+import random
+
+print("welcome to number guesser.")
+
+min=int(input("whats the lowest value possible"))
+max=int(input("whats the highest value possible"))
+
+number= random.randint(min,max)
+count = 0
+while True:
+	guess = int(input("guess a number: "))
+	if guess == number:
+		print("YAY u won")
+		break
+	elif guess > number:
+		print("TOO HIGH")
+		count += 1
+	elif guess < number:
+	    print("TOO LOW")
+	    count += 1 
+	elif count == 6:
+		print("too many guesses. srlsy. come on.")
+		print(number)
+		break
+	else:
+		print("YOU BROKE THE SYSTEM..............jerk") 
